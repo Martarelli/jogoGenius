@@ -97,3 +97,9 @@ let playGame = () => {
 
     nextLevel();
 }
+
+green.addEventListener('click', click(0));
+red.addEventListener('click', click(1));
+yellow.addEventListener('click', click(2));
+blue.addEventListener('click', click(3));
+
