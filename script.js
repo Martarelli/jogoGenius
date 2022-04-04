@@ -57,9 +57,8 @@ let click = (color) => {
 
     setTimeout(() => {
         createColorElement(color).classList.remove('selected');
-    });
-
-    checkOrder();
+        checkOrder();
+    }, 250);
 }
 
 // Função que retorna a cor
@@ -98,8 +97,11 @@ let playGame = () => {
     nextLevel();
 }
 
-green.addEventListener('click', click(0));
-red.addEventListener('click', click(1));
-yellow.addEventListener('click', click(2));
-blue.addEventListener('click', click(3));
 
+green.onClick = () => click(0);
+red.onClick = () => click(1);
+yellow.onClick = () => click(2);
+blue.onClick = () => click(3);
+
+
+playGame();
